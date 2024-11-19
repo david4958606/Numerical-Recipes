@@ -1,23 +1,9 @@
 cmake_minimum_required(VERSION 3.20)
-set(CMAKE_TOOLCHAIN_FILE "C:\\Programming\\Cpp\\vcpkg\\scripts\\buildsystems\\vcpkg.cmake")
-# 设置项目名称和语言
 project(NumericalRecipes LANGUAGES CXX)
-
+# 设置项目名称和语言
 # 设置C++标准为C++20
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-if(${CMAKE_SYSTEM_NAME} MATCHES "Darwin")
-    message(STATUS "Building on macOS")
-
-    # 设置编译器为 Clang
-    set(CMAKE_C_COMPILER "/usr/bin/clang")
-    set(CMAKE_CXX_COMPILER "/usr/bin/clang++")
-
-    message(STATUS "Set C compiler to ${CMAKE_C_COMPILER}")
-    message(STATUS "Set C++ compiler to ${CMAKE_CXX_COMPILER}")
-else()
-    message(STATUS "Not macOS, using default compiler")
-endif()
 # 添加子目录
 add_subdirectory(src)
 add_subdirectory(test)
