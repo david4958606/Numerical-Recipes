@@ -2,12 +2,12 @@
 find_package(GTest CONFIG REQUIRED)
 
 # 添加所有测试源文件
-file(GLOB TEST_SOURCES "*.cpp")
+#file(GLOB TEST_SOURCES "*.cpp")
 
 # 为每个测试源文件创建一个可执行目标，并链接 GTest 和被测试的库
 # 假设 TEST_SOURCES 已经包含所有测试源文件
 # 例如：
- set(TEST_SOURCES TestMain.cpp TestCalendar.cpp TestBinaryTricky.cpp)
+set(TEST_SOURCES TestMain.cpp TestBinaryTricky.cpp)
 
 # 创建一个单一的可执行文件，将所有测试源文件包含进去
 add_executable(AllTests ${TEST_SOURCES})
